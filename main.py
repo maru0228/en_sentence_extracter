@@ -28,7 +28,7 @@ def split_sentences(text, all_sentences, deduplication):
 
 def clean_output_dir():
     for file_name in file_names("./output"):
-        os.remove(path + "/" + file_name)
+        os.remove("./output/" + file_name)
 
 def extract(file_name, all_sentences, deduplication):
     f = open("./input" + "/" + file_name, "r", encoding="UTF-8")
