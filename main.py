@@ -20,6 +20,10 @@ def split_sentences(text, all_sentences, deduplication):
     text = text.lower()
     sentences = list(set(text.split()))
     sentences.sort()
+
+    # 二文字までの英単語は省略する
+    sentences = [s for s in sentences if len(s) > 2]
+
     if deduplication:
         for sentence in all_sentences:
             if sentence in sentences:
